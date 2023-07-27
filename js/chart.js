@@ -7,7 +7,7 @@ let canvasElem = document.getElementById('chart')
  let appState = new AppState();
  //- Use a method on that AppState to load vote data from localStorage.
  appState.loadItems();
- appState.load();
+
  // - Create a data object for chart.js using your AppState's allProducts array.
  const data = {
     labels: appState.allProducts.map(product => product.name),
@@ -40,13 +40,9 @@ let canvasElem = document.getElementById('chart')
  // - Call chart.js with the configuration and the canvasElem
  function renderChart() {
     new Chart(canvasElem, config);
+
   }
   
   renderChart();
-  
- 
 
-function renderChart() {
-}
 
-renderChart();
